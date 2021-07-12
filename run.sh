@@ -1,0 +1,1 @@
+docker run --rm -it -p 11345:11345 -p:11311:11311 px4-gazebo-headless:latest

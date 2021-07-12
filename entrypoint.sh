@@ -21,7 +21,7 @@ function show_help {
 OPTIND=1 # Reset in case getopts has been used previously in the shell.
 
 vehicle=iris
-world=yosemite
+world=simple_obstacle
 
 while getopts "h?v:w:" opt; do
     case "$opt" in

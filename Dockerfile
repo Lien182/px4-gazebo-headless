@@ -46,8 +46,7 @@ RUN pip3 install empy \
                  packaging \
                  pyros-genmsg \
                  toml \
-                 pyyaml \
-                 jsonschema
+                 pyyaml
 
 RUN git clone https://github.com/eProsima/foonathan_memory_vendor.git ${WORKSPACE_DIR}/foonathan_memory_vendor \
     && cd ${WORKSPACE_DIR}/foonathan_memory_vendor \
@@ -68,7 +67,6 @@ RUN git clone --recursive https://github.com/eProsima/Fast-DDS-Gen.git -b v1.0.4
     && cd ${WORKSPACE_DIR}/Fast-RTPS-Gen \
     && ./gradlew assemble \
     && ./gradlew install
-
 
 RUN git clone https://github.com/Lien182/PX4-Autopilot.git  ${FIRMWARE_DIR}
 RUN git -C ${FIRMWARE_DIR} checkout master
